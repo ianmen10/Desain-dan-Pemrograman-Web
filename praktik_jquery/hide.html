@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hide Example</title>
+</head>
+<body>
+	<h2> Ini adalah Judul Bab</h2>
+	<h3 class="subjudul"> Ini adalah Sub Judul Bab</h3>
+	    <p id="paragraf-1"> Ini adalah paragraf pertama </p>
+	<p id="paragraf-2" class="dua"> Ini adalah paragraf kedua </p>
+	<div>
+		<p class="paragraf">
+			Ini adalah paragraf ketiga
+		</p>
+	</div>
+	<p> Ini paragraf yang akan tetap ditampilkan</p>
+	<button id="btnHide"> Klik Saya! </button>
+
+	<!-- jQuery via CDN with local fallback -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>if (typeof jQuery === 'undefined') { document.write('<script src="jquery-3.3.1.js"><\\/script>'); }</script>
+
+	<script>
+		$(function(){
+			$('#btnHide').on('click', function(){
+				$('h2').hide();
+				$('.subjudul').hide();
+				$('#paragraf-1').hide();
+				$('#paragraf-2').hide();
+				$('div p.paragraf').hide();
+			});
+		});
+	</script>
+</body>
+</html>

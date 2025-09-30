@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Praktikum jQuery</title>
+</head>
+<body>
+  <input type="button" id="buttonl" value="Klik Saya!"/>
+
+  <!-- jQuery via CDN with local fallback to reduce $ is not defined errors -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>if (typeof jQuery === 'undefined') { document.write('<script src="jquery-3.7.1.js"><\\/script>'); }</script>
+
+  <script>
+    // Safe shorthand for document ready
+    $(function(){
+      // use .on() instead of .click() for clarity
+      $("#buttonl").on('click', function(){
+        alert("Ini Praktikum Minggu ke-4");
+      });
+    });
+  </script>
+</body>
+</html>

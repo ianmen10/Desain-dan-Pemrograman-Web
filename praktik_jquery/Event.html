@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+  #paragraf {
+   /* Style CSS awal */
+   font-size:30px;
+  }
+  </style>
+  <script src="jquery-3.7.1.js"></script> 16  <script>
+   $(document).ready(function() {
+    $("#paragraf").click(function() {
+     $("#paragraf").css("color", "white"); // Event 1: click
+    });
+    $("#paragraf").mouseover(function() {
+     $("#paragraf").css("background-color", "silver"); // Event 2: mouseover
+    });
+    $("#paragraf").mouseout(function () {
+     $("#paragraf").css("background-color", "blue"); // Event 3: mouseout
+    });
+    $("#paragraf").dblclick(function() {
+     $("#paragraf").css("border", "solid 3px black"); // Event 4: dblclick
+    });
+   }); 
+  </script>
+ </head>
+ <body>
+  <p id="paragraf">Praktikum Minggu ke-4 JQuery</p>
+ </html>
+ </body>
