@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/*header dan navigasi*/
+header {
+    background: linear-gradient(90deg, #007bff, #00b4d8);
+    color: white;
+    padding: 15px 0;
+    text-align : center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/*produk*/
+.produk-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.produk {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    transition: transdorm 0.2s;
+}
+
+/*efek*/
+.produk-hover {
+    transform: scale(1.05);
+}
+
+.produk img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.produk h3 {
+    margin: 10px 0 5px;
+}
+
+.produk button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.produk button:hover {
+    background: #0056b3;
+}
+
+/*keranjang*/
+.keranjang-section {
+    padding: 40px;
+    background: #fff;
+    border-radius: 12px;
+    margin: 40px auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.keranjang-section ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.keranjang-section li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#checkout-btn {
+    margin-top: 15px;
+    background: #00b894;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#checkout-btn:hover {
+    background: #009974;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f0f0f0;
+    margin-top: 50px;
+}

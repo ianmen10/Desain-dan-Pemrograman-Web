@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Toko Online Ilham</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>🛒 Toko Online Ilham</h1>
+            <nav>
+                <a href="#produk">Produk</a>
+                <a href="#Keranjang">Keranjang</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="produk" class="produk-section">
+                <h2>Daftar Produk</h2>
+                <div class="produk-list">
+                    <div class="produk">
+                        <img src="sepatu.jpg" alt="Sepatu">
+                        <h3>sepatu gunung</h3>
+                        <p>Rp 1`.500.000</p>
+                        <button onclick="tambahKeKeranjang('sepatu gunung', 1500000)">Tambah ke Keranjang</button>
+                    </div>
+                    <div class="produk">
+                        <img src="Carrier.jpg" alt="Carrier">
+                        <h3>Carrier</h3>
+                        <p>Rp 2.800.000</p>
+                        <button onclick="tambahKeKeranjang('Carrier', 2800000)">Tambah ke Keranjang</button>
+                    </div>
+                    <div class="produk">
+                        <img src="jaket.jpg" alt="Jaket">
+                        <h3>Jaket</h3>
+                        <p>Rp 2.500.000</p>
+                        <button onclick="tambahKeKeranjang('Jaket', 2500000)">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="Keranjang" class="keranjang-section">
+                <h2>Keranjang Belanja</h2>
+                <ul id="daftar-keranjang"></ul>
+                <p id="total-harga">Total: Rp 0</p>
+                <button id="checkout-btn" onclick="checkout()">Checkout</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>@ 2025 Ilham Dharma Atmaja - Toko Online Sederhana</p>
+        </footer>
+
+    </body>
+    <script src="script.js"></script>
+</html>
