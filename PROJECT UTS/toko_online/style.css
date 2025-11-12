@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #f7f9fc 60%, #e0f7fa 100%);
+    color: #222;
+    font-family: 'Poppins', Arial, sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(90deg, #4361ee 0%, #4cc9f0 100%);
+    color: white;
+    padding: 24px 0 16px 0;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(67, 97, 238, 0.10);
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: 500;
+    font-size: 1.08rem;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #ffe066;
+    text-decoration: underline;
+}
+/* Tata letak dan gaya untuk elemen form/logout di navbar agar konsisten */
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Form logout di navbar - tampil inline */
+.nav-logout-form {
+    display: inline-block;
+    margin-left: 6px;
+}
+
+/* Gaya untuk tombol logout agar mirip dengan link navbar */
+.nav-link-button {
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background 0.18s, transform 0.12s;
+}
+.nav-link-button:hover {
+    background: rgba(255,255,255,0.08);
+    transform: translateY(-1px);
+}
+
+/*produk*/
+.produk-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.produk-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+    padding: 24px 0;
+}
+
+.produk {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(67, 97, 238, 0.10);
+    padding: 22px 18px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+}
+
+.produk:hover {
+    box-shadow: 0 12px 36px rgba(67, 97, 238, 0.18);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.produk img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(76, 201, 240, 0.08);
+}
+
+.produk h3 {
+    margin: 8px 0 4px 0;
+    font-size: 1.15rem;
+    color: #4361ee;
+    font-weight: 600;
+    text-align: center;
+}
+
+.produk p {
+    color: #222;
+    font-size: 1.08rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.produk button {
+    background: linear-gradient(90deg, #4361ee 0%, #4cc9f0 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(67, 97, 238, 0.08);
+    transition: transform 0.2s, background 0.2s;
+    margin-top: 8px;
+}
+
+.produk button:hover {
+    background: linear-gradient(90deg, #4895ef 0%, #4cc9f0 100%);
+    transform: scale(1.07);
+}
+
+/*keranjang*/
+.keranjang-section {
+    padding: 32px;
+    background: #fff;
+    border-radius: 18px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 16px rgba(67, 97, 238, 0.10);
+}
+
+.keranjang-section h2 {
+    color: #4361ee;
+    font-weight: 600;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.keranjang-section ul {
+    list-style: none;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.keranjang-section li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.05rem;
+}
+
+#checkout-btn {
+    margin-top: 18px;
+    background: linear-gradient(90deg, #00b894 0%, #4cc9f0 100%);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(76, 201, 240, 0.08);
+    transition: background 0.2s, transform 0.2s;
+}
+
+#checkout-btn:hover {
+    background: linear-gradient(90deg, #009974 0%, #4895ef 100%);
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+    background: #f0f0f0;
+    margin-top: 50px;
+    color: #222;
+    font-size: 1.05rem;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+
+@media (max-width: 700px) {
+    .produk-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+
+    .keranjang-section {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .produk-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    header {
+        padding: 16px 0 10px 0;
+    }
+
+    .keranjang-section {
+        padding: 8px;
+    }
+}
+
